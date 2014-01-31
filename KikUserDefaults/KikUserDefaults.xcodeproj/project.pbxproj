@@ -1,0 +1,508 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6271125D189C3B6700D9E27F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6271125C189C3B6700D9E27F /* Foundation.framework */; };
+		6271125F189C3B6700D9E27F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6271125E189C3B6700D9E27F /* CoreGraphics.framework */; };
+		62711261189C3B6700D9E27F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62711260189C3B6700D9E27F /* UIKit.framework */; };
+		62711267189C3B6700D9E27F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 62711265189C3B6700D9E27F /* InfoPlist.strings */; };
+		62711269189C3B6700D9E27F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 62711268189C3B6700D9E27F /* main.m */; };
+		6271126D189C3B6700D9E27F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6271126C189C3B6700D9E27F /* AppDelegate.m */; };
+		62711276189C3B6700D9E27F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62711275189C3B6700D9E27F /* XCTest.framework */; };
+		62711277189C3B6700D9E27F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6271125C189C3B6700D9E27F /* Foundation.framework */; };
+		62711278189C3B6700D9E27F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62711260189C3B6700D9E27F /* UIKit.framework */; };
+		62711280189C3B6700D9E27F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6271127E189C3B6700D9E27F /* InfoPlist.strings */; };
+		62711282189C3B6700D9E27F /* KikUserDefaultsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 62711281189C3B6700D9E27F /* KikUserDefaultsTests.m */; };
+		62711290189C3DEA00D9E27F /* KikUserDefaultsBackend.m in Sources */ = {isa = PBXBuildFile; fileRef = 6271128D189C3DEA00D9E27F /* KikUserDefaultsBackend.m */; };
+		62711291189C3DEA00D9E27F /* KikUserDefaultsProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6271128F189C3DEA00D9E27F /* KikUserDefaultsProxy.m */; };
+		62711297189C3E1100D9E27F /* SampleKikUserDefaultsBackend.m in Sources */ = {isa = PBXBuildFile; fileRef = 62711294189C3E1100D9E27F /* SampleKikUserDefaultsBackend.m */; };
+		62711298189C3E1100D9E27F /* SampleKikUserDefaultsProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 62711296189C3E1100D9E27F /* SampleKikUserDefaultsProxy.m */; };
+		6271129E189C3E4100D9E27F /* MockKikUserDefaultsBackend.m in Sources */ = {isa = PBXBuildFile; fileRef = 6271129B189C3E4100D9E27F /* MockKikUserDefaultsBackend.m */; };
+		6271129F189C3E4100D9E27F /* MockKikUserDefaultsProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6271129D189C3E4100D9E27F /* MockKikUserDefaultsProxy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		62711279189C3B6700D9E27F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 62711251189C3B6700D9E27F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 62711258189C3B6700D9E27F;
+			remoteInfo = KikUserDefaults;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		62711259189C3B6700D9E27F /* KikUserDefaults.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KikUserDefaults.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6271125C189C3B6700D9E27F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6271125E189C3B6700D9E27F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		62711260189C3B6700D9E27F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		62711264189C3B6700D9E27F /* KikUserDefaults-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KikUserDefaults-Info.plist"; sourceTree = "<group>"; };
+		62711266189C3B6700D9E27F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		62711268189C3B6700D9E27F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6271126A189C3B6700D9E27F /* KikUserDefaults-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KikUserDefaults-Prefix.pch"; sourceTree = "<group>"; };
+		6271126B189C3B6700D9E27F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6271126C189C3B6700D9E27F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		62711274189C3B6700D9E27F /* KikUserDefaultsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KikUserDefaultsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		62711275189C3B6700D9E27F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		6271127D189C3B6700D9E27F /* KikUserDefaultsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KikUserDefaultsTests-Info.plist"; sourceTree = "<group>"; };
+		6271127F189C3B6700D9E27F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		62711281189C3B6700D9E27F /* KikUserDefaultsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KikUserDefaultsTests.m; sourceTree = "<group>"; };
+		6271128C189C3DEA00D9E27F /* KikUserDefaultsBackend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KikUserDefaultsBackend.h; path = KikUserDefaults/KikUserDefaultsBackend.h; sourceTree = "<group>"; };
+		6271128D189C3DEA00D9E27F /* KikUserDefaultsBackend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KikUserDefaultsBackend.m; path = KikUserDefaults/KikUserDefaultsBackend.m; sourceTree = "<group>"; };
+		6271128E189C3DEA00D9E27F /* KikUserDefaultsProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KikUserDefaultsProxy.h; path = KikUserDefaults/KikUserDefaultsProxy.h; sourceTree = "<group>"; };
+		6271128F189C3DEA00D9E27F /* KikUserDefaultsProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KikUserDefaultsProxy.m; path = KikUserDefaults/KikUserDefaultsProxy.m; sourceTree = "<group>"; };
+		62711293189C3E1100D9E27F /* SampleKikUserDefaultsBackend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SampleKikUserDefaultsBackend.h; path = Sample/SampleKikUserDefaultsBackend.h; sourceTree = "<group>"; };
+		62711294189C3E1100D9E27F /* SampleKikUserDefaultsBackend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SampleKikUserDefaultsBackend.m; path = Sample/SampleKikUserDefaultsBackend.m; sourceTree = "<group>"; };
+		62711295189C3E1100D9E27F /* SampleKikUserDefaultsProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SampleKikUserDefaultsProxy.h; path = Sample/SampleKikUserDefaultsProxy.h; sourceTree = "<group>"; };
+		62711296189C3E1100D9E27F /* SampleKikUserDefaultsProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SampleKikUserDefaultsProxy.m; path = Sample/SampleKikUserDefaultsProxy.m; sourceTree = "<group>"; };
+		6271129A189C3E4100D9E27F /* MockKikUserDefaultsBackend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MockKikUserDefaultsBackend.h; path = Mock/MockKikUserDefaultsBackend.h; sourceTree = "<group>"; };
+		6271129B189C3E4100D9E27F /* MockKikUserDefaultsBackend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MockKikUserDefaultsBackend.m; path = Mock/MockKikUserDefaultsBackend.m; sourceTree = "<group>"; };
+		6271129C189C3E4100D9E27F /* MockKikUserDefaultsProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MockKikUserDefaultsProxy.h; path = Mock/MockKikUserDefaultsProxy.h; sourceTree = "<group>"; };
+		6271129D189C3E4100D9E27F /* MockKikUserDefaultsProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MockKikUserDefaultsProxy.m; path = Mock/MockKikUserDefaultsProxy.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		62711256189C3B6700D9E27F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6271125F189C3B6700D9E27F /* CoreGraphics.framework in Frameworks */,
+				62711261189C3B6700D9E27F /* UIKit.framework in Frameworks */,
+				6271125D189C3B6700D9E27F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62711271189C3B6700D9E27F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62711276189C3B6700D9E27F /* XCTest.framework in Frameworks */,
+				62711278189C3B6700D9E27F /* UIKit.framework in Frameworks */,
+				62711277189C3B6700D9E27F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		62711250189C3B6700D9E27F = {
+			isa = PBXGroup;
+			children = (
+				62711262189C3B6700D9E27F /* KikUserDefaults */,
+				6271127B189C3B6700D9E27F /* KikUserDefaultsTests */,
+				6271125B189C3B6700D9E27F /* Frameworks */,
+				6271125A189C3B6700D9E27F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6271125A189C3B6700D9E27F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				62711259189C3B6700D9E27F /* KikUserDefaults.app */,
+				62711274189C3B6700D9E27F /* KikUserDefaultsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6271125B189C3B6700D9E27F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6271125C189C3B6700D9E27F /* Foundation.framework */,
+				6271125E189C3B6700D9E27F /* CoreGraphics.framework */,
+				62711260189C3B6700D9E27F /* UIKit.framework */,
+				62711275189C3B6700D9E27F /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		62711262189C3B6700D9E27F /* KikUserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				6271128B189C3DDB00D9E27F /* KikUserDefaults */,
+				62711292189C3DF200D9E27F /* Example */,
+				6271126B189C3B6700D9E27F /* AppDelegate.h */,
+				6271126C189C3B6700D9E27F /* AppDelegate.m */,
+				62711263189C3B6700D9E27F /* Supporting Files */,
+			);
+			path = KikUserDefaults;
+			sourceTree = "<group>";
+		};
+		62711263189C3B6700D9E27F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				62711264189C3B6700D9E27F /* KikUserDefaults-Info.plist */,
+				62711265189C3B6700D9E27F /* InfoPlist.strings */,
+				62711268189C3B6700D9E27F /* main.m */,
+				6271126A189C3B6700D9E27F /* KikUserDefaults-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6271127B189C3B6700D9E27F /* KikUserDefaultsTests */ = {
+			isa = PBXGroup;
+			children = (
+				62711299189C3E3900D9E27F /* Mock */,
+				62711281189C3B6700D9E27F /* KikUserDefaultsTests.m */,
+				6271127C189C3B6700D9E27F /* Supporting Files */,
+			);
+			path = KikUserDefaultsTests;
+			sourceTree = "<group>";
+		};
+		6271127C189C3B6700D9E27F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6271127D189C3B6700D9E27F /* KikUserDefaultsTests-Info.plist */,
+				6271127E189C3B6700D9E27F /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6271128B189C3DDB00D9E27F /* KikUserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				6271128C189C3DEA00D9E27F /* KikUserDefaultsBackend.h */,
+				6271128D189C3DEA00D9E27F /* KikUserDefaultsBackend.m */,
+				6271128E189C3DEA00D9E27F /* KikUserDefaultsProxy.h */,
+				6271128F189C3DEA00D9E27F /* KikUserDefaultsProxy.m */,
+			);
+			name = KikUserDefaults;
+			sourceTree = "<group>";
+		};
+		62711292189C3DF200D9E27F /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				62711293189C3E1100D9E27F /* SampleKikUserDefaultsBackend.h */,
+				62711294189C3E1100D9E27F /* SampleKikUserDefaultsBackend.m */,
+				62711295189C3E1100D9E27F /* SampleKikUserDefaultsProxy.h */,
+				62711296189C3E1100D9E27F /* SampleKikUserDefaultsProxy.m */,
+			);
+			name = Example;
+			sourceTree = "<group>";
+		};
+		62711299189C3E3900D9E27F /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				6271129A189C3E4100D9E27F /* MockKikUserDefaultsBackend.h */,
+				6271129B189C3E4100D9E27F /* MockKikUserDefaultsBackend.m */,
+				6271129C189C3E4100D9E27F /* MockKikUserDefaultsProxy.h */,
+				6271129D189C3E4100D9E27F /* MockKikUserDefaultsProxy.m */,
+			);
+			name = Mock;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		62711258189C3B6700D9E27F /* KikUserDefaults */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62711285189C3B6700D9E27F /* Build configuration list for PBXNativeTarget "KikUserDefaults" */;
+			buildPhases = (
+				62711255189C3B6700D9E27F /* Sources */,
+				62711256189C3B6700D9E27F /* Frameworks */,
+				62711257189C3B6700D9E27F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KikUserDefaults;
+			productName = KikUserDefaults;
+			productReference = 62711259189C3B6700D9E27F /* KikUserDefaults.app */;
+			productType = "com.apple.product-type.application";
+		};
+		62711273189C3B6700D9E27F /* KikUserDefaultsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62711288189C3B6700D9E27F /* Build configuration list for PBXNativeTarget "KikUserDefaultsTests" */;
+			buildPhases = (
+				62711270189C3B6700D9E27F /* Sources */,
+				62711271189C3B6700D9E27F /* Frameworks */,
+				62711272189C3B6700D9E27F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6271127A189C3B6700D9E27F /* PBXTargetDependency */,
+			);
+			name = KikUserDefaultsTests;
+			productName = KikUserDefaultsTests;
+			productReference = 62711274189C3B6700D9E27F /* KikUserDefaultsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		62711251189C3B6700D9E27F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Kik Interactive";
+				TargetAttributes = {
+					62711273189C3B6700D9E27F = {
+						TestTargetID = 62711258189C3B6700D9E27F;
+					};
+				};
+			};
+			buildConfigurationList = 62711254189C3B6700D9E27F /* Build configuration list for PBXProject "KikUserDefaults" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 62711250189C3B6700D9E27F;
+			productRefGroup = 6271125A189C3B6700D9E27F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				62711258189C3B6700D9E27F /* KikUserDefaults */,
+				62711273189C3B6700D9E27F /* KikUserDefaultsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		62711257189C3B6700D9E27F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62711267189C3B6700D9E27F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62711272189C3B6700D9E27F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62711280189C3B6700D9E27F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		62711255189C3B6700D9E27F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6271126D189C3B6700D9E27F /* AppDelegate.m in Sources */,
+				62711291189C3DEA00D9E27F /* KikUserDefaultsProxy.m in Sources */,
+				62711298189C3E1100D9E27F /* SampleKikUserDefaultsProxy.m in Sources */,
+				62711269189C3B6700D9E27F /* main.m in Sources */,
+				62711297189C3E1100D9E27F /* SampleKikUserDefaultsBackend.m in Sources */,
+				62711290189C3DEA00D9E27F /* KikUserDefaultsBackend.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62711270189C3B6700D9E27F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62711282189C3B6700D9E27F /* KikUserDefaultsTests.m in Sources */,
+				6271129E189C3E4100D9E27F /* MockKikUserDefaultsBackend.m in Sources */,
+				6271129F189C3E4100D9E27F /* MockKikUserDefaultsProxy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6271127A189C3B6700D9E27F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 62711258189C3B6700D9E27F /* KikUserDefaults */;
+			targetProxy = 62711279189C3B6700D9E27F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		62711265189C3B6700D9E27F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				62711266189C3B6700D9E27F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6271127E189C3B6700D9E27F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6271127F189C3B6700D9E27F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		62711283189C3B6700D9E27F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		62711284189C3B6700D9E27F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		62711286189C3B6700D9E27F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KikUserDefaults/KikUserDefaults-Prefix.pch";
+				INFOPLIST_FILE = "KikUserDefaults/KikUserDefaults-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		62711287189C3B6700D9E27F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KikUserDefaults/KikUserDefaults-Prefix.pch";
+				INFOPLIST_FILE = "KikUserDefaults/KikUserDefaults-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		62711289189C3B6700D9E27F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KikUserDefaults.app/KikUserDefaults";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KikUserDefaults/KikUserDefaults-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "KikUserDefaultsTests/KikUserDefaultsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		6271128A189C3B6700D9E27F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KikUserDefaults.app/KikUserDefaults";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KikUserDefaults/KikUserDefaults-Prefix.pch";
+				INFOPLIST_FILE = "KikUserDefaultsTests/KikUserDefaultsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		62711254189C3B6700D9E27F /* Build configuration list for PBXProject "KikUserDefaults" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62711283189C3B6700D9E27F /* Debug */,
+				62711284189C3B6700D9E27F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		62711285189C3B6700D9E27F /* Build configuration list for PBXNativeTarget "KikUserDefaults" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62711286189C3B6700D9E27F /* Debug */,
+				62711287189C3B6700D9E27F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		62711288189C3B6700D9E27F /* Build configuration list for PBXNativeTarget "KikUserDefaultsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62711289189C3B6700D9E27F /* Debug */,
+				6271128A189C3B6700D9E27F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 62711251189C3B6700D9E27F /* Project object */;
+}
