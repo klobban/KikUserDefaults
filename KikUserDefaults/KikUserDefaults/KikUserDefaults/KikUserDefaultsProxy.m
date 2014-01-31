@@ -74,7 +74,7 @@
         __unsafe_unretained NSString *property = nil;
         [invocation getArgument:&property atIndex:2];
         
-        NSString *type = [_cachePropertyNamesToTypes objectForKey:property];
+        NSString *type = _cachePropertyNamesToTypes[property];
         [invocation setArgument:&type atIndex:2];
         [invocation invoke];
         
@@ -115,7 +115,7 @@
         [[NSUserDefaults standardUserDefaults] synchronize];
         
         // Fire notification if needed.
-        if ([_backend.propertyNotifications objectForKey:propertyName]) {
+        if (_backend.propertyNotifications[propertyName]) {
             [[NSNotificationCenter defaultCenter] postNotificationName:[NSString stringWithFormat:USER_DEFAULTS_NOTIFICATION_TEMPLATE, propertyName]
                                                                 object:nil
                                                               userInfo:@{ propertyName : [[NSUserDefaults standardUserDefaults] objectForKey:propertyName] }];
@@ -161,7 +161,7 @@
 - (NSString *)propertyNameFromSelector:(SEL)selector
 {
     // Check the cache to see if we've already encountered this selector.
-    NSString *propertyName = [_cacheSelectorToPropertyName objectForKey:NSStringFromSelector(selector)];
+    NSString *propertyName = _cacheSelectorToPropertyName[NSStringFromSelector(selector)];
     
     if (propertyName != nil)
     {
@@ -185,7 +185,7 @@
     }
     
     // Update the cache.
-    [_cacheSelectorToPropertyName setObject:propertyName forKey:NSStringFromSelector(selector)];
+    _cacheSelectorToPropertyName[NSStringFromSelector(selector)] = propertyName;
     
     return propertyName;
 }
@@ -200,14 +200,14 @@
 - (SEL)typeSelectorForSelector:(SEL)selector
 {
     // Check if the type selector already exists in the cache.
-    NSString *propertySelector = [_cacheTypeSelectorForPropertySelector objectForKey:NSStringFromSelector(selector)];
+    NSString *propertySelector = _cacheTypeSelectorForPropertySelector[NSStringFromSelector(selector)];
     
     if (propertySelector != nil) {
         return NSSelectorFromString(propertySelector);
     }
     
     BOOL isSetter = [self selectorIsASetter:selector];
-    NSString *rawPropertyType = [_cachePropertyNamesToTypes objectForKey:[self propertyNameFromSelector:selector]];
+    NSString *rawPropertyType = _cachePropertyNamesToTypes[[self propertyNameFromSelector:selector]];
     SEL typeSelector = nil;
     
     // Given the raw property type, find the appropriate type-based selector.
@@ -277,8 +277,7 @@
     
     // Update the cache and return the type selector (if one exists).
     if (typeSelector) {
-        [_cacheTypeSelectorForPropertySelector setObject:NSStringFromSelector(typeSelector)
-                                                  forKey:NSStringFromSelector(selector)];
+        _cacheTypeSelectorForPropertySelector[NSStringFromSelector(selector)] = NSStringFromSelector(typeSelector);
         return typeSelector;
     }
     
@@ -310,8 +309,7 @@
         NSString *convertedPropertyType = [NSString stringWithUTF8String:rawPropertyType];
         NSString *convertedName = [NSString stringWithUTF8String:propertyNameCString];
         
-        [propertyTypeDictionary setObject:convertedPropertyType
-                                   forKey:convertedName];
+        propertyTypeDictionary[convertedName] = convertedPropertyType;
     }
     
     free(properties);

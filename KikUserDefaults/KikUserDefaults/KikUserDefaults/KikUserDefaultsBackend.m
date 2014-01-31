@@ -26,7 +26,7 @@
 {
     // Remove any dangling notifiers.
     for (NSString *property in [_propertyNotifications allKeys]) {
-        for (id notificationIdentifer in [_propertyNotifications objectForKey:property]) {
+        for (id notificationIdentifer in _propertyNotifications[property]) {
             [[NSNotificationCenter defaultCenter] removeObserver:notificationIdentifer];
         }
     }
@@ -171,10 +171,10 @@
                                                                                   object:nil
                                                                                    queue:[NSOperationQueue mainQueue]
                                                                               usingBlock:^(NSNotification *note) {
-                                                                                  callback([note.userInfo objectForKey:property]);
+                                                                                  callback(note.userInfo[property]);
                                                                               }];
     
-    NSMutableArray *notifierArray = [_propertyNotifications objectForKey:property];
+    NSMutableArray *notifierArray = _propertyNotifications[property];
     
     if (notifierArray == nil) {
         notifierArray = [NSMutableArray arrayWithObject:notificationIdentifier];
@@ -182,7 +182,7 @@
         [notifierArray addObject:notifierArray];
     }
     
-    [_propertyNotifications setObject:notifierArray forKey:property];
+    _propertyNotifications[property] = notifierArray;
     
     return notificationIdentifier;
 }
@@ -196,7 +196,7 @@
     // Find and remove the notification identifier from the notification array associated
     // with the property entry.
     for (NSString *property in [_propertyNotifications allKeys]) {
-        NSMutableArray *notifierArray = [_propertyNotifications objectForKey:property];
+        NSMutableArray *notifierArray = _propertyNotifications[property];
         
         if ([notifierArray containsObject:observerIdentifier]) {
             [notifierArray removeObject:observerIdentifier];
@@ -224,7 +224,7 @@
         id value = [[NSUserDefaults standardUserDefaults] objectForKey:property];
         
         if (value) {
-            [dictionary setObject:value forKey:property];
+            dictionary[property] = value;
         }
     }
     
