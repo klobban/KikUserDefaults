@@ -51,7 +51,7 @@ Using KikUserDefaults involves subclassing `KikUserDefaultsProxy`, adding the pr
 #### Usage
 
 	KikUserDefaultsBackend *backend = [[KikUserDefaultsBackend alloc] init];
-	SampleKikUserDefaultsProxy *proxy = [SampleKikUserDefaultsProxy alloc] initWithKikUserDefaultsBackend:backend]
+	SampleKikUserDefaultsProxy *proxy = [SampleKikUserDefaultsProxy alloc] initWithKikUserDefaultsBackend:backend];
 	
 	// Setting this property to NO will in turn update the NSUserDefault in storage and notify
 	// any observers.
